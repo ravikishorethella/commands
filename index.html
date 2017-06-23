@@ -69,6 +69,28 @@ ordered by the date and time they were last modified.
 7> cp from_file_name to_file_name
 The cp command copies files or directories. Here, we copy the contents of from_file_name into to_file_name. 
 
+8> multiple files
+
+cp biopic/cleopatra.txt historical/
+
+To copy a file into a directory, use cp with the source file as the first argument and the destination directory as the second argument.
+Here, we copy the file biopic/cleopatra.txt and place it in the historical/ directory.
+
+cp biopic/ray.txt biopic/notorious.txt historical/
+
+To copy multiple files into a directory, use cp with a list of source files as the first arguments, and the destination directory 
+as the last argument. Here, we copy the files biopic/ray.txt and biopic/notorious.txt into the historical/ directory.
+
+9> using wildcards
+
+cp * satire/
+In addition to using filenames as arguments, we can use special characters like * to select groups of files.
+These special characters are called wildcards. The * selects all files in the working directory, 
+so here we use cp to copy all files into the satire/ directory.
+
+cp m*.txt scifi/
+Here, m*.txt selects all files in the working directory starting with "m" and ending with ".txt", and copies them to scifi/.
+
 5> rm: rm filename
 This command is used to delete the files from the folders or directories.
 6> rm -rf: rm -rf foldername:
