@@ -43,7 +43,8 @@ touch creates a new file inside the working directory.
 
 <!-- =====================================   -->
 
-5> The ls command lists all files and directories in the working directory.
+5>  ls -a, ls -t, ls -l
+The ls command lists all files and directories in the working directory.
 The -a modifies the behavior of the ls command to also list the files and directories starting with a dot (.). 
 Files started with a dot are hidden, and don't appear when using ls alone.
 
@@ -56,6 +57,15 @@ Here are three common options:
 -a - lists all contents, including hidden files and directories
 -l - lists all contents of a directory in long format
 -t - order files and directories by the time they were last modified.
+
+6> ls -alt:
+The -t option orders files and directories by the time they were last modified.
+
+In addition to using each option separately, like ls -a or ls -l, multiple options can be used together, like ls -alt.
+
+Here, ls -alt lists all contents, including hidden files and directories, in long format, 
+ordered by the date and time they were last modified.
+
 
 
 
