@@ -248,6 +248,26 @@ grep -Rl searches all files in a directory and outputs only filenames with match
 -R stands for "recursive" and l stands for "files with matches". Here grep -Rl searches the /home/ccuser/workspace/geography directory 
 for the string "Arctic" and outputs filenames with matched results.
 
+17> sed 
+
+$ sed 's/snow/rain/' forests.txt
+sed stands for "stream editor". It accepts standard input and modifies it based on an expression, before displaying it as output data.
+ It is similar to "find and replace".
+
+Let's look at the expression 's/snow/rain/':
+
+s: stands for "substitution". it is always used when using sed for substitution.
+snow: the search string, the text to find.
+rain: the replacement string, the text to add in place.
+
+In this case, sed searches forests.txt for the word "snow" and replaces it with "rain." 
+Importantly, the above command will only replace the first instance of "snow" on a line.
+
+$ sed 's/snow/rain/g' forests.txt
+The above command uses the g expression, meaning "global". Here sed searches forests.txt for the word "snow" 
+and replaces it with "rain", globally. All instances of "snow" on a line will be turned to "rain".  
+
+18> 
 
 10> man ls/cd/etc
 This command is as user guide
