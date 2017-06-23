@@ -163,7 +163,14 @@ standard output, abbreviated as stdout, is the information outputted after a pro
 standard error, abbreviated as stderr, is an error message outputted by a failed process.
 Redirection reroutes standard input, standard output, and standard error to or from a different location.
 
+13> How does redirection work?
 
+$ echo "Hello" > hello.txt
+The > command redirects the standard output to a file. Here, "Hello" is entered as the standard input.
+The standard output "Hello" is redirected by > to the file hello.txt.
+
+$ cat hello.txt
+The cat command outputs the contents of a file to the terminal. When you type cat hello.txt, the contents of hello.txt are displayed.
 
 
 10> man ls/cd/etc
