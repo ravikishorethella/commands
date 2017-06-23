@@ -224,7 +224,30 @@ Here by piping sort deserts.txt to uniq, all duplicate lines are alphabetized (a
 sort deserts.txt | uniq > uniq-deserts.txt
 Here we simply send filtered contents to uniq-deserts.txt, which you can view with the cat command. 
 
-15>  
+15> grep 
+
+$ grep Mount mountains.txt
+grep stands for "global regular expression print". It searches files for lines that match a pattern and returns the results.
+ It is also case sensitive. Here, grep searches for "Mount" in mountains.txt.
+
+$ grep -i Mount mountains.txt
+grep -i enables the command to be case insensitive. Here, grep searches for capital or lowercase strings that match Mount in mountains.txt.
+
+The above commands are a great way to get started with grep. If you are familiar with regular expressions, 
+you can use regular expressions to search for patterns in files 
+
+16> grep -R
+
+$ grep -R Arctic /home/ccuser/workspace/geography
+grep -R searches all files in a directory and outputs filenames and lines containing matched results. 
+-R stands for "recursive". Here grep -R searches the /home/ccuser/workspace/geography directory for the string "Arctic" and 
+outputs filenames and lines with matched results.
+
+$ grep -Rl Arctic /home/ccuser/workspace/geography
+grep -Rl searches all files in a directory and outputs only filenames with matched results.
+-R stands for "recursive" and l stands for "files with matches". Here grep -Rl searches the /home/ccuser/workspace/geography directory 
+for the string "Arctic" and outputs filenames with matched results.
+
 
 10> man ls/cd/etc
 This command is as user guide
