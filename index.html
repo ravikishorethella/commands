@@ -172,6 +172,37 @@ The standard output "Hello" is redirected by > to the file hello.txt.
 $ cat hello.txt
 The cat command outputs the contents of a file to the terminal. When you type cat hello.txt, the contents of hello.txt are displayed.
 
+ex 1: $ cat oceans.txt > continents.txt
+> takes the standard output of the command on the left, and redirects it to the file on the right.
+Here the standard output of cat oceans.txt is redirected to continents.txt.
+
+Note that > overwrites all original content in continents.txt. When you view the output data by typing cat on continents.txt,
+you will see only the contents of oceans.txt.
+
+ex 2: $ cat glaciers.txt >> rivers.txt
+>> takes the standard output of the command on the left and appends (adds) it to the file on the right. 
+You can view the output data of the file with cat and the filename.
+
+Here, the the output data of rivers.txt will contain the original contents of rivers.txt with the content of glaciers.txt appended to it.
+
+ex 3: $ cat < lakes.txt
+< takes the standard input from the file on the right and inputs it into the program on the left. 
+Here, lakes.txt is the standard input for the cat command. The standard output appears in the terminal.
+
+ex 4: $ cat volcanoes.txt | wc
+| is a "pipe". The | takes the standard output of the command on the left, and pipes it as standard input to the command on the right.
+ You can think of this as "command to command" redirection.
+
+Here the output of cat volcanoes.txt is the standard input of wc. in turn, the wc command outputs the number of lines, words, 
+and characters in volcanoes.txt, respectively.
+
+$ cat volcanoes.txt | wc | cat > islands.txt
+Multiple |s can be chained together. Here the standard output of cat volcanoes.txt is "piped" to the wc command.
+ The standard output of wc is then "piped" to cat. Finally, the standard output of cat is redirected to islands.txt.
+
+You can view the output data of this chain by typing cat islands.txt.
+
+ 
 
 10> man ls/cd/etc
 This command is as user guide
