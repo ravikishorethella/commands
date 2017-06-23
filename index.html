@@ -202,7 +202,29 @@ Multiple |s can be chained together. Here the standard output of cat volcanoes.t
 
 You can view the output data of this chain by typing cat islands.txt.
 
+ex 5: $ sort lakes.txt
+sort takes the standard input and orders it alphabetically for the standard output.
+ Here, the lakes in sort lakes.txt are listed in alphabetical order.
+
+$ cat lakes.txt | sort > sorted-lakes.txt
+Here, the command takes the standard output from cat lakes.txt and "pipes" it to sort. 
+The standard output of sort is redirected to sorted-lakes.txt.
+
+You can view the output data by typing cat on the file sorted-lakes.txt.
  
+13> $ uniq deserts.txt
+uniq stands for "unique" and filters out adjacent, duplicate lines in a file.
+ Here uniq deserts.txt filters out duplicates of "Sahara Desert", because the duplicate of 'Sahara Desert' directly
+ follows the previous instance. The "Kalahari Desert" duplicates are not adjacent, and thus remain.
+
+14> sort deserts.txt | uniq
+A more effective way to call uniq is to call sort to alphabetize a file, and "pipe" the standard output to uniq. 
+Here by piping sort deserts.txt to uniq, all duplicate lines are alphabetized (and thereby made adjacent) and filtered out.
+
+sort deserts.txt | uniq > uniq-deserts.txt
+Here we simply send filtered contents to uniq-deserts.txt, which you can view with the cat command. 
+
+15>  
 
 10> man ls/cd/etc
 This command is as user guide
